@@ -1,10 +1,25 @@
-<jhi-page-ribbon></jhi-page-ribbon>
+<!-- <jhi-page-ribbon></jhi-page-ribbon> -->
+
 <div>
     <router-outlet name="navbar"></router-outlet>
 </div>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="card jh-card">
-        <router-outlet></router-outlet>
-    </div>
-    <jhi-footer></jhi-footer>
+ -->
+
+<!-- <div class="kt-grid kt-grid--hor kt-grid--root">
+    <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"> -->
+
+<div ktContentAnimate class="kt-container kt-grid__item kt-grid__item--fluid"
+    [ngClass]="{'kt-container--fluid': fluid}">
+
+    <router-outlet></router-outlet>
 </div>
+<!--             <jhi-footer></jhi-footer>
+ -->
+<!--   </div>
+    </div>
+
+</div> -->
