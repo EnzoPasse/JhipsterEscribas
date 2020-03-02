@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/tslint/config */
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRouteSnapshot, NavigationEnd, NavigationError } from '@angular/router';
@@ -18,6 +20,8 @@ export class MainComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.initLoyout();
+
     // try to log in automatically
     this.accountService.identity().subscribe();
 
@@ -47,5 +51,9 @@ export class MainComponent implements OnInit {
       pageTitle = 'global.title';
     }
     this.translateService.get(pageTitle).subscribe(title => this.titleService.setTitle(title));
+  }
+
+  private initLoyout() {
+    document.body.classList.add('kt-aside--enabled', 'kt-aside--fixed');
   }
 }

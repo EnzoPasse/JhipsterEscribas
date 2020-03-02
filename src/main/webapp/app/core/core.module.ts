@@ -26,6 +26,7 @@ import { fontAwesomeIcons } from './icons/font-awesome-icons';
     HttpClientModule,
     CookieModule.forRoot(),
     NgxWebstorageModule.forRoot({ prefix: 'jhi', separator: '-' }),
+
     NgJhipsterModule.forRoot({
       // set below to true to make alerts look like toast
       alertAsToast: true,

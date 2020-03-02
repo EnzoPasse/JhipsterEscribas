@@ -5,8 +5,10 @@ import { JhipsterEscribasSharedModule } from 'app/shared/shared.module';
 import { HOME_ROUTE } from './home.route';
 import { HomeComponent } from './home.component';
 
+import { NgxPermissionsModule } from 'ngx-permissions';
+
 @NgModule({
-  imports: [JhipsterEscribasSharedModule, RouterModule.forChild([HOME_ROUTE])],
+  imports: [JhipsterEscribasSharedModule, NgxPermissionsModule.forChild(), RouterModule.forChild([HOME_ROUTE])],
   declarations: [HomeComponent]
 })
 export class JhipsterEscribasHomeModule {}
